@@ -33,7 +33,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("insert into NOTE(id, title, content) values (1, 'first', 'first text')");
         db.execSQL("insert into NOTE(id, title, content) values (2, 'second', 'second text')");
         db.execSQL("create table PROPS(id integer primary key, size text, color text)");
-        db.execSQL("insert into PROPS(id, size, color) values (1, '12', 'WHITE')");
+        db.execSQL("insert into PROPS(id, size, color) values (1, '12', 'BLACK')");
     }
 
     private void deleteTables(SQLiteDatabase db) {
