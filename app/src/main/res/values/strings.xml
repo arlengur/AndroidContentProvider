@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndroidSQlLite</string>
+    <string name="create_name">Create</string>
+    <string name="cancel_name">Cancel</string>
+    <string name="update_name">Update</string>
+    <string name="setup_name">Setup</string>
+    <string name="save_name">Save</string>
+    <string name="text_size_label">Text Size</string>
+    <string name="text_color_label">Text Color</string>
+</resources>
