@@ -7,6 +7,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "DATABASE_NAME";
+    public static final String NOTE_TABLE = "NOTE";
+    public static final String NOTE_ID = "id";
+    public static final String NOTE_TITLE = "title";
+    public static final String NOTE_CONTENT = "content";
     public static final int DB_VERSION = 6;
 
     public DBHelper(Context context) {
@@ -29,9 +33,9 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     private void createTables(SQLiteDatabase db) {
-        db.execSQL("create table NOTE(id integer primary key, title text, content text)");
-        db.execSQL("insert into NOTE(id, title, content) values (1, 'first', 'first text')");
-        db.execSQL("insert into NOTE(id, title, content) values (2, 'second', 'second text')");
+        db.execSQL("create table " + NOTE_TABLE + "(" + NOTE_ID + " integer primary key autoincrement, " + NOTE_TITLE + " text, " + NOTE_CONTENT + " text)");
+        db.execSQL("insert into NOTE(title, content) values ('first', 'first text')");
+        db.execSQL("insert into NOTE(title, content) values ('second', 'second text')");
         db.execSQL("create table PROPS(id integer primary key, size text, color text)");
         db.execSQL("insert into PROPS(id, size, color) values (1, '12', 'BLACK')");
     }
